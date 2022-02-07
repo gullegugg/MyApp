@@ -12,7 +12,15 @@ public class MyApp : Gtk.Application {
             default_width = 300,
             title = "Hello World!"
         };
-        main_window.show ();
+        var btn_hello = new Gtk.Button.with_label("Click me!") {
+            margin = 12
+        };
+        btn_hello.clicked.connect (() => {
+            btn_hello.label = "Hallow c:";
+            btn_hello.sensitive = false;
+        });
+        main_window.add(btn_hello);
+        main_window.show_all ();
     }
     
     public static int main (string[] args) {
