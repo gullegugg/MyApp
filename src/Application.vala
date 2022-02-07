@@ -1,3 +1,7 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2021 Gustav Hagland <gustav.hagland@gmail.com>
+ */
 public class MyApp : Gtk.Application {
     public MyApp () {
         Object (
@@ -19,6 +23,8 @@ public class MyApp : Gtk.Application {
             btn_hello.label = "Hallow c:";
             btn_hello.sensitive = false;
         });
+        var lbl_hello = new Gtk.Label("Nämen tjena");
+        main_window.add(lbl_hello);
         main_window.add(btn_hello);
         main_window.show_all ();
     }
