@@ -23,9 +23,13 @@ public class MyApp : Gtk.Application {
             btn_hello.label = "Hallow c:";
             btn_hello.sensitive = false;
         });
-        var lbl_hello = new Gtk.Label("Nämen tjena");
-        main_window.add(lbl_hello);
-        main_window.add(btn_hello);
+        var lbl_hello = new Gtk.Label("Well hello there");
+        var grid = new Gtk.Grid () {
+            orientation = Gtk.Orientation.VERTICAL
+        };
+        grid.add(btn_hello);
+        grid.add(lbl_hello);
+        main_window.add(grid);
         main_window.show_all ();
     }
     
